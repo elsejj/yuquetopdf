@@ -1,0 +1,6 @@
+panflute==1.12.5
+tinycss2==1.0.2
+reportlab==3.5.42
+lxml==4.5.0
+requests==2.22.0
+cssselect2==0.3.0
