@@ -70,7 +70,7 @@
   - mac: 在使用 brew 的情况下，通过 `brew install mactex` 来安装
 - pandoc 的较新版本
   - windows : 在使用 scoop 的情况下，通过 `scoop install pandoc`来安装
-  - mac: 在使用 brew 的情况下，通过 `brew install ``pandoc`来安装
+  - mac: 在使用 brew 的情况下，通过 `brew install pandoc`来安装
 
 
 
@@ -113,3 +113,7 @@ python build.py tests\sample.md
     - 替换 思源黑体 为需要的字体名
     - 替换 14pt 为需要的字体大小
 
+
+
+
+[使用 Pandoc 把 Markdown 转为 PDF 文件]: https://jdhao.github.io/2017/12/10/pandoc-markdown-with-chinese/  "使用 Pandoc 把 Markdown 转为 PDF 文件"

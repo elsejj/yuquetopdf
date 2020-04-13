@@ -31,7 +31,7 @@ def downlaod_image(elem, doc):
     if isinstance(elem, Image):
         img : Image = elem
         u = requests.utils.urlparse(img.url)
-        attrs = dict(parse_qsl(u.fragment))
+        #attrs = dict(parse_qsl(u.fragment))
         #print(u, file=sys.stderr)
         cache_path = f'{image_cahce}{u.path}'
         if not path.exists(cache_path):
@@ -62,8 +62,5 @@ def main(doc=None):
     return run_filter(downlaod_image, doc=doc)
 
 if __name__ == "__main__":
-    #svglib.DEFAULT_FONT_NAME = 'SimSun'
-    #pdfmetrics.registerFont(TTFont('黑体', 'MSYHL.ttc', subfontIndex=0,asciiReadable=0))
     pdfmetrics.registerFont(TTFont('simhei', 'simhei.ttf'))
-    #pdfmetrics.registerFont(UnicodeCIDFont("STSong-Light"))
     main()

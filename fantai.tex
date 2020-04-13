@@ -140,12 +140,14 @@ $endif$
 $if(CJKmainfont)$
   \ifxetex
     \usepackage[space]{xeCJK}
+    \usepackage{indentfirst}
     \setCJKmainfont[$for(CJKoptions)$$CJKoptions$$sep$,$endfor$]{$CJKmainfont$}
     \linespread{1.2}\selectfont 	% 行距
-    \XeTeXlinebreaklocale "zh" 	% 針對中文自動換行
-    \XeTeXlinebreakskip = 0pt plus 1pt % 字與字之間加入0pt至1pt的間距，確保左右對整齊
-    \parindent 0em 		% 段落縮進
-    \setlength{\parskip}{20pt} 	% 段落之間的距離
+    \XeTeXlinebreaklocale "zh" 	% 中文的字段换行
+    \XeTeXlinebreakskip = 0pt plus 1pt % 字与字间加入 0~1pt的间距，保障左右对齐
+    %\parindent 2em 		% 段落缩进
+    \setlength{\parindent}{2em}
+    \setlength{\parskip}{20pt} 	% 段间距
   \fi
 $endif$
 $if(luatexjapresetoptions)$
