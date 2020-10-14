@@ -4,11 +4,12 @@ import os.path
 import re
 import shutil
 import datetime
+import os
 
 
 FONT_NAME = '思源黑体'
 AUTHOR_NAME = '钒钛智能'
-PANDOC = 'C:\\Users\\Jia\\scoop\\apps\pandoc\\2.8.1\\pandoc.exe'
+PANDOC = os.getenv("PANDOC_EXE") or "pandoc"
 
 
 mdtitle = """
