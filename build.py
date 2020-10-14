@@ -8,6 +8,7 @@ import datetime
 
 FONT_NAME = '思源黑体'
 AUTHOR_NAME = '钒钛智能'
+PANDOC = 'C:\\Users\\Jia\\scoop\\apps\pandoc\\2.8.1\\pandoc.exe'
 
 
 mdtitle = """
@@ -31,6 +32,7 @@ def format_md(iname, oname):
 
     href = re.compile(r'<a.*?>.*?</a>')
     br = re.compile(r'<br\s*/>')
+    tag = re.compile(r'{.*}')
 
     firstTitle = False # use first title as document title
 
@@ -76,11 +78,11 @@ def main():
 
         
     cmd = [
-        'pandoc',
+        PANDOC,
         ffname,
         "-o",
         ofname,
-        "--filter",  "./yuque.py",
+        "--lua-filter",  "yuque.lua",
         "--template", "./fantai.tex",
         "--pdf-engine=xelatex",
         "--toc", "-N",
