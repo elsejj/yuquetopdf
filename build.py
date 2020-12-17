@@ -84,14 +84,14 @@ def main():
         "-o",
         ofname,
         "--lua-filter",  "yuque.lua",
-        "--template", "./fantai.tex",
+        "--template", "fantai.tex",
         "--pdf-engine=xelatex",
         "--toc", "-N",
         '-V geometry:"top=2cm, bottom=1.5cm, left=2cm, right=2cm"',
         "-V", f"CJKmainfont={FONT_NAME}",
         "-V", f"mainfont={FONT_NAME}",
         "-V", f"fontsize=14pt",
-        "-V", f"logo=./logo.png",
+        "-V", f"logo=logo.png",
         "-V", "colorlinks"
     ]
     print(' '.join(cmd))
